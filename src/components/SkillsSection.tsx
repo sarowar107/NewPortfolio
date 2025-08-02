@@ -3,42 +3,42 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const skills = {
-    'Machine Learning': [
-      { name: 'TensorFlow', level: 70, indicator: 'Advanced' },
-      { name: 'PyTorch', level: 65, indicator: 'Intermediate' },
+   'Machine Learning': [
+      { name: 'NumPy', level: 80 },
+      { name: 'Pandas', level: 85 },
+      { name: 'Classification', level: 70 },
+      { name: 'Regression', level: 75 },
+      { name: 'Clustering', level: 65 },
     ],
     'Programming Languages': [
-      { name: 'C', level: 75, indicator: 'Advanced' },
-      { name: 'C++', level: 70, indicator: 'Advanced' },
-      { name: 'C#', level: 60, indicator: 'Intermediate' },
-      { name: 'Python', level: 80, indicator: 'Advanced' },
-      { name: 'JavaScript', level: 90, indicator: 'Expert' },
+      { name: 'C', level: 75 },
+      { name: 'C++', level: 70 },
+      { name: 'C#', level: 60 },
+      { name: 'JavaScript', level: 90 },
     ],
     'Frontend Development': [
-      { name: 'React', level: 85, indicator: 'Advanced' },
-      { name: 'Tailwind CSS', level: 90, indicator: 'Expert' },
+      { name: 'HTML', level: 95 },
+      { name: 'CSS', level: 90 },
+      { name: 'Bootstrap', level: 85 },
+      { name: 'React', level: 85 },
+      { name: 'Tailwind CSS', level: 90 },
     ],
     'Backend Development': [
-      { name: 'Node.js', level: 80, indicator: 'Advanced' },
+      { name: 'Java', level: 85 },
+      { name: 'Spring Boot', level: 80 },
+      { name: 'Python', level: 80 },
+      { name: 'Django', level: 75 },
+      { name: 'Node.js', level: 80 },
     ],
-    'Cybersecurity': [
-      { name: 'Network Security', level: 50, indicator: 'Intermediate' },
-      { name: 'Ethical Hacking', level: 55, indicator: 'Intermediate' },
+    'Database Management': [
+      { name: 'MySQL', level: 80 },
+      { name: 'PostgreSQL', level: 75 },
+      { name: 'MongoDB', level: 70 },
     ],
-  };
-
-  const getIndicatorColor = (indicator: string) => {
-    switch (indicator) {
-      case 'Beginner': return 'bg-green-300';
-      case 'Intermediate': return 'bg-blue-300';
-      case 'Advanced': return 'bg-purple-300';
-      case 'Expert': return 'bg-pink-300';
-      default: return 'bg-gray-300';
-    }
   };
 
   return (
-    <section id="skills" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="skills" className="py-20 px-4 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,39 +52,41 @@ const SkillsSection = () => {
         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
       </motion.div>
 
-      {Object.entries(skills).map(([category, skillList], index) => (
-        <div key={index} className="mb-12">
-          <h3 className="text-3xl font-semibold mb-6 text-gray-300">{category}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillList.map((skill, skillIndex) => (
-              <motion.div
-                key={skillIndex}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.1 * skillIndex }}
-                className="bg-gray-800 rounded-2xl shadow-lg p-6"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="text-xl font-semibold">{skill.name}</h4>
-                  <span className={`text-xs font-bold px-2 py-1 rounded-full ${getIndicatorColor(skill.indicator)}`}>
-                    {skill.indicator}
-                  </span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-6 relative">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.2, ease: 'easeInOut' }}
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 h-6 rounded-full absolute top-0 left-0"
-                  ></motion.div>
-                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-sm font-bold">{skill.level}%</span>
-                </div>
-              </motion.div>
-            ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        {Object.entries(skills).map(([category, skillList], index) => (
+          <div
+            key={index}
+            className="bg-gray-900 border border-gray-700 rounded-2xl shadow-lg p-6"
+          >
+            <h3 className="text-2xl font-semibold mb-4 text-center text-gray-200">
+              {category}
+            </h3>
+            <div className="space-y-4">
+              {skillList.map((skill, skillIndex) => (
+                <motion.div
+                  key={skillIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.05 * skillIndex }}
+                >
+                  <div className="mb-1 text-sm font-medium text-gray-300">
+                    {skill.name}
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-3 relative">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.0, ease: 'easeInOut' }}
+                      className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full absolute top-0 left-0"
+                    ></motion.div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };
