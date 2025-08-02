@@ -29,7 +29,7 @@ const AboutSection = () => {
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-1">
               <div className="bg-gray-900 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
+                  src="Photos/Sarowar2.png" 
                   alt="Sarowar Islam" 
                   className="w-full h-auto object-cover"
                 />
