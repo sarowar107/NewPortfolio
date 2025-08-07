@@ -3,18 +3,13 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const skills = {
-   'Machine Learning': [
-      { name: 'NumPy', level: 80 },
-      { name: 'Pandas', level: 85 },
-      { name: 'Classification', level: 70 },
-      { name: 'Regression', level: 75 },
-      { name: 'Clustering', level: 65 },
-    ],
     'Programming Languages': [
-      { name: 'C', level: 75 },
-      { name: 'C++', level: 70 },
+  
+      { name: 'C++', level: 90 },
       { name: 'C#', level: 60 },
-      { name: 'JavaScript', level: 90 },
+      { name: 'Python', level: 70 },
+      { name: 'Java', level: 80 },
+      { name: 'JavaScript', level: 80 },
     ],
     'Frontend Development': [
       { name: 'HTML', level: 95 },

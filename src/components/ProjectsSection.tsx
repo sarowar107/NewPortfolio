@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Machine Learning with Disaster Prediction',
-      description: 'Developed a machine learning model to predict the severity of disasters using advanced regression techniques.',
-      imageUrl: 'https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      link: '#',
+      title: 'SoleSphere - E-commerce Store',
+      description: 'Developed an e-commerce platform for footwear, featuring user authentication, product management, and a secure payment gateway.',
+      imageUrl: 'Photos/solespheref.png',
+      link: 'https://sole-sphere.netlify.app/',
     },
     {
-      title: 'House Price Advanced Regression',
-      description: 'Implemented a regression model to predict house prices based on various features, enhancing prediction accuracy.',
-      imageUrl: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      link: '#',
+      title: 'BookCottage - Online Bookstore',
+      description: 'Developed an online bookstore platform with features like user authentication, book management, and a shopping cart.',
+      imageUrl: 'Photos/BookCottage.png',
+      link: 'https://bookcottage.netlify.app/',
     },
     {
       title: 'GHOORNI - CUET Student Portal',
