@@ -12,7 +12,7 @@ const ProjectsSection = () => {
     {
       title: 'BookCottage - Online Bookstore',
       description: 'Developed an online bookstore platform with features like user authentication, book management, and a shopping cart.',
-      imageUrl: 'Photos/BookCottage.png',
+      imageUrl: 'https://raw.githubusercontent.com/sarowar107/NewPortfolio/main/Photos/BookCottage.png',
       link: 'https://bookcottage.netlify.app/',
     },
     {
