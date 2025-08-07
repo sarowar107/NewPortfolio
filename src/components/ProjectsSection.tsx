@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     {
       title: 'SoleSphere - E-commerce Store',
       description: 'Developed an e-commerce platform for footwear, featuring user authentication, product management, and a secure payment gateway.',
-      imageUrl: 'Photos/solespheref.png',
+      imageUrl: 'https://raw.githubusercontent.com/sarowar107/NewPortfolio/main/Photos/solespheref.png',
       link: 'https://sole-sphere.netlify.app/',
     },
     {
